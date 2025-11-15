@@ -31285,7 +31285,7 @@ index 7ce13f4..82ec7b5 100644
 @@ -3,9 +3,9 @@ name = "lmds-template"
  version = "1.0.0"
  description = "Local data stack template"
- authors = [{ name = "Georg Heiler", email = "georg.kf.heiler@gmail.com" }]
+	authors = [{ name = "achrafS133", email = "achrafS133@users.noreply.github.com" }]
 -requires-python = "== 3.12"
 +requires-python = ">=3.10,<4"
  

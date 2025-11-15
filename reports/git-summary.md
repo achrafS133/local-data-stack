@@ -4,7 +4,7 @@ Generated: 2025-11-15
 
 ## Contributors (short)
 
-- 22  Georg Heiler <georg.kf.heiler@gmail.com>
+-- 22  achrafS133 <errahouti.2003.achraf@gmail.com>
 - 3   geoHeil <1694964+geoHeil@users.noreply.github.com>
 - 2   achrafS133 <errahouti.2003.achraf@gmail.com>
 - 1   Oleksii Vykaliuk <alekzvik@users.noreply.github.com>
