@@ -11,7 +11,8 @@ license = { text = "UNLICENSED" }
 dependencies = []
 
 [project.urls]
-repository = "https://github.com/local-to-cloud-data-platform/local-to-cloud-data-platform"
+repository = "https://github.com/achrafS133/local-data-stack"
 
 [tool.setuptools.packages.find]
 exclude = ["shared_library_tests"]
+

@@ -26,7 +26,7 @@ def get_env(deployment_key: str = "DAGSTER_DEPLOYMENT", default_value="dev"):
         f"Unknown environment: {os.environ.get(deployment_key, default_value)}"
     )
 
-DBT_PROJECT_DIR = file_relative_path(__file__, "../../../../code_location_local-to-cloud-data-platform_dbt")
+DBT_PROJECT_DIR = file_relative_path(__file__, "../../../../code_location_local_to_cloud_data_platform_dbt")
 dbt_project_path = Path(DBT_PROJECT_DIR)
 
 dbt_project = DbtProject(
@@ -44,9 +44,8 @@ RESOURCES_LOCAL = {
     "ddb": DuckDBPathResource(
         file_path=str(
             Path(
-                "/home/heiler/development/projects/local-to-cloud-data-platform/local-to-cloud-data-platform/prototyping/tech-exploration/dagster/z_state/analytics/analytics_database_dev.duckdb"
+                "./analytics_database_dev.duckdb"
             )
-            .expanduser()
             .resolve()
         )
     ),
@@ -60,7 +59,7 @@ RESOURCES_PROD = {
     "ddb": DuckDBPathResource(
         file_path=str(
             Path(
-                "./local-to-cloud-data-platform/code_location_local-to-cloud-data-platform_dbt/analytics_database_prod.duckdb"
+                "./local-to-cloud-data-platform/code_location_local_to_cloud_data_platform_dbt/analytics_database_prod.duckdb"
             )
         )
     ),
@@ -78,3 +77,4 @@ def get_resources_for_deployment(log_env: bool = True):
         get_dagster_logger().info(f"Using deployment of: {deployment_name}")
 
     return resource_defs_by_deployment_name[deployment_name]
+

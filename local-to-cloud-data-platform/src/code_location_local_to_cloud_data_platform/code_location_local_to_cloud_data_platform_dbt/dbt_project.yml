@@ -1,7 +1,7 @@
-name: 'code_location_local-to-cloud-data-platform'
+name: 'code_location_local_to_cloud_data_platform'
 version: '1.0.0'
 
-profile: 'code_location_local-to-cloud-data-platform'
+profile: 'code_location_local_to_cloud_data_platform'
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -19,7 +19,7 @@ models:
   +persist_docs:
     relation: true
     columns: true
-  code_location_local-to-cloud-data-platform:
+  code_location_local_to_cloud_data_platform:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
@@ -27,3 +27,4 @@ models:
 
   post-hook:
     - "{{ create_latest_version_view() }}"
+

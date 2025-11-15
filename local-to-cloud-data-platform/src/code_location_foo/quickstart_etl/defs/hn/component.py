@@ -24,3 +24,4 @@ class HnComponent(dg.Component, dg.Model, dg.Resolvable):
 @dg.component_instance
 def load(context: dg.ComponentLoadContext) -> HnComponent:
     return HnComponent()
+

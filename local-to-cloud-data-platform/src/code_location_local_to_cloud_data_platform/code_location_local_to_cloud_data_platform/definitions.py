@@ -28,7 +28,7 @@ def defs():
         git_branch="main",
         file_path_mapping=dg.AnchorBasedFilePathMapping(
             local_file_anchor=Path(root_dir).parent,
-            file_anchor_path_in_repository="src/code_location_local-to-cloud-data-platform",
+            file_anchor_path_in_repository="src/code_location_local_to_cloud_data_platform",
         ),
     )
 
@@ -40,3 +40,4 @@ def defs():
         resources=base.resources,
         asset_checks=base.asset_checks,
     )
+

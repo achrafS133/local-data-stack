@@ -8,3 +8,4 @@ import dagster as dg
 )
 def logistics_example():
     return 1
+

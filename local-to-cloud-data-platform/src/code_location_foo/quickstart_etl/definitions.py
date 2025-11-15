@@ -40,3 +40,4 @@ def defs():
         resources=base.resources,
         asset_checks=base.asset_checks,
     )
+

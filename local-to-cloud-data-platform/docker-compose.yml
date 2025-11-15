@@ -28,7 +28,7 @@ services:
     #  - "5434:5432"
     restart: always
     volumes:
-      - C:\Users\MSI\Desktop\local-to-cloud-data-platform\local-data-stack/local-to-cloud-data-platform-z_state/dagster_postgres:/var/lib/postgresql/data
+      - ./z_state/dagster_postgres:/var/lib/postgresql/data
       #- ./services/orchestration/init.sql:/docker-entrypoint-initdb.d/init.sql
 
     healthcheck:
@@ -69,8 +69,8 @@ services:
     # Make docker client accessible so we can terminate containers from dagster-webserver
       - /var/run/docker.sock:/var/run/docker.sock
 
-      - C:\Users\MSI\Desktop\local-to-cloud-data-platform\local-data-stack/local-to-cloud-data-platform-z_state/dagster_logs:/opt/dagster/dagster_home/compute_logs
-      - C:\Users\MSI\Desktop\local-to-cloud-data-platform\local-data-stack/local-to-cloud-data-platform-z_state/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
+      - ./z_state/dagster_logs:/opt/dagster/dagster_home/compute_logs
+      - ./z_state/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
     #command: bash
     #stdin_open: true # docker run -i
     #tty: true        # docker run -t
@@ -123,8 +123,8 @@ services:
     volumes:
     # Make docker client accessible so we can launch containers using host docker
       - /var/run/docker.sock:/var/run/docker.sock
-      - C:\Users\MSI\Desktop\local-to-cloud-data-platform\local-data-stack/local-to-cloud-data-platform-z_state/dagster_logs:/opt/dagster/dagster_home/compute_logs
-      - C:\Users\MSI\Desktop\local-to-cloud-data-platform\local-data-stack/local-to-cloud-data-platform-z_state/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
+      - ./z_state/dagster_logs:/opt/dagster/dagster_home/compute_logs
+      - ./z_state/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
     networks:
       - dagster_net
 
@@ -147,11 +147,11 @@ services:
       #- ./lookup_datasets:/opt/dagster/dagster_home/src/lookup_datasets
       # for PROD container map PROD data here
       ## linux
-      #- /home/heiler/development/projects/local-to-cloud-data-platform/local-to-cloud-data-platform/z_state/dagster_logs:/opt/dagster/dagster_home/compute_logs
-      #- /home/heiler/development/projects/local-to-cloud-data-platform/local-to-cloud-data-platform/z_state/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
+      #- ./z_state/dagster_logs:/opt/dagster/dagster_home/compute_logs
+      #- ./z_state/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
       ## mac
-      - C:\Users\MSI\Desktop\local-to-cloud-data-platform\local-data-stack/local-to-cloud-data-platform-z_state/dagster_logs:/opt/dagster/dagster_home/compute_logs
-      - C:\Users\MSI\Desktop\local-to-cloud-data-platform\local-data-stack/local-to-cloud-data-platform-z_state/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
+      - ./z_state/dagster_logs:/opt/dagster/dagster_home/compute_logs
+      - ./z_state/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
     #platform: linux/amd64
     profiles:
       - dagster_onprem
@@ -176,9 +176,9 @@ services:
       #- ./lookup_datasets:/opt/dagster/dagster_home/src/lookup_datasets
       # for PROD container map PROD data here
 
-      - C:\Users\MSI\Desktop\local-to-cloud-data-platform\local-data-stack/local-to-cloud-data-platform-z_state/analytics:C:\Users\MSI\Desktop\local-to-cloud-data-platform\local-data-stack/local-to-cloud-data-platform-z_state/analytics
-      - C:\Users\MSI\Desktop\local-to-cloud-data-platform\local-data-stack/local-to-cloud-data-platform-z_state/dagster_logs:/opt/dagster/dagster_home/compute_logs
-      - C:\Users\MSI\Desktop\local-to-cloud-data-platform\local-data-stack/local-to-cloud-data-platform-z_state/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
+      - ./z_state/analytics:./z_state/analytics
+      - ./z_state/dagster_logs:/opt/dagster/dagster_home/compute_logs
+      - ./z_state/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
       # yamllint enable
 
     #platform: linux/amd64

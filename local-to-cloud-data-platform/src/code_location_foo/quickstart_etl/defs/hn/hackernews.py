@@ -98,3 +98,4 @@ def most_frequent_words(context: AssetExecutionContext) -> MaterializeResult:
 
     # Attach the Markdown content as metadata to the asset
     return MaterializeResult(metadata={"plot": MetadataValue.md(md_content)})
+

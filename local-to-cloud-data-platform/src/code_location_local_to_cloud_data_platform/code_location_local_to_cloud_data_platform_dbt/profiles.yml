@@ -1,7 +1,7 @@
 flags:
   send_anonymous_usage_stats: False
 
-code_location_local-to-cloud-data-platform:
+code_location_local_to_cloud_data_platform:
   target: dev
   outputs:
     dev:
@@ -27,3 +27,4 @@ code_location_local-to-cloud-data-platform:
       path: C:\Users\MSI\Desktop\local-to-cloud-data-platform\local-data-stack/local-to-cloud-data-platform-z_state/analytics/analytics_database_prod.duckdb
       #external_root: /foo/the/bar
       threads: 4
+

@@ -1,5 +1,5 @@
 import dagster as dg
-from code_location_local-to-cloud-data-platform import defs
+from code_location_local_to_cloud_data_platform import defs
 
 
 def test_project_loads():
@@ -10,3 +10,4 @@ def test_project_loads():
     # implied_repo.load_all_definitions()
     actual_defs = defs()
     dg.Definitions.validate_loadable(actual_defs)
+

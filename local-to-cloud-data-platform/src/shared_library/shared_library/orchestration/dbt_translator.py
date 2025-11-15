@@ -183,3 +183,4 @@ def process_dbt_assets(
                 output_name=dagster_event.output_name,
             )
         yield dagster_event
+

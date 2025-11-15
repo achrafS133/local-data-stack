@@ -2,7 +2,7 @@
 name = "lmds-template"
 version = "1.0.0"
 description = "Local data stack template"
-authors = [{ name = "Georg Heiler", email = "georg.kf.heiler@gmail.com" }]
+authors = [{ name = "achrafS133", email = "errahouti.2003.achraf@gmail.com" }]
 requires-python = ">=3.10,<4"
 
 [tool.pixi.workspace]
@@ -34,7 +34,7 @@ description = "Format yaml & toml files"
 env = { RUST_LOG = "warn" }
 
 [tool.pixi.tasks.tpl-init-cruft]
-cmd = "pixi run -e template cruft create https://github.com/l-mds/local-data-stack.git"
+cmd = "pixi run -e template cruft create https://github.com/achrafS133/local-data-stack.git"
 description = "Initialize template with cruft"
 
 [tool.pixi.tasks.render-dev]
