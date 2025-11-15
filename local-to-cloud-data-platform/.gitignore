@@ -683,7 +683,8 @@ gradle-app.setting
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,intellij+all,pycharm,jupyternotebooks,deno,angular,react,reactnative
-src/local-to-cloud-data-platform/code_location_local-to-cloud-data-platform_dbt/config/.user.yml
-src/local-to-cloud-data-platform/code_location_local-to-cloud-data-platform_dbt/analytics_database_dev.duckdb
-src/local-to-cloud-data-platform/code_location_local-to-cloud-data-platform_dbt/analytics_database_prod.duckdb
+.dagster_home/
+src/code_location_local_to_cloud_data_platform/code_location_local_to_cloud_data_platform_dbt/.user.yml
+src/code_location_local_to_cloud_data_platform/code_location_local_to_cloud_data_platform_dbt/analytics_database_dev.duckdb
+src/code_location_local_to_cloud_data_platform/code_location_local_to_cloud_data_platform_dbt/analytics_database_prod.duckdb
 z_state/
