@@ -31172,8 +31172,8 @@ index ab00d18..58dd2bd 100644
        ## linux
 -      #- /home/heiler/development/projects/{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug }}/z_state/dagster_logs:/opt/dagster/dagster_home/compute_logs
 -      #- /home/heiler/development/projects/{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug }}/z_state/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
-+      #- /home/heiler/development/projects/local-to-cloud-data-platform/local-to-cloud-data-platform/z_state/dagster_logs:/opt/dagster/dagster_home/compute_logs
-+      #- /home/heiler/development/projects/local-to-cloud-data-platform/local-to-cloud-data-platform/z_state/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
++      #- ./local-to-cloud-data-platform/z_state/dagster_logs:/opt/dagster/dagster_home/compute_logs
++      #- ./local-to-cloud-data-platform/z_state/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
        ## mac
 -      - {{ cookiecutter.state_path }}/dagster_logs:/opt/dagster/dagster_home/compute_logs
 -      - {{ cookiecutter.state_path }}/dagster_local_artifact_storage:/opt/dagster/local_artifact_storage
@@ -31446,7 +31446,7 @@ index 1853c7f..962a8f9 100644
          file_path=str(
              Path(
 -                "/home/heiler/development/projects/{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug }}/prototyping/tech-exploration/dagster/z_state/analytics/analytics_database_dev.duckdb"
-+                "/home/heiler/development/projects/local-to-cloud-data-platform/local-to-cloud-data-platform/prototyping/tech-exploration/dagster/z_state/analytics/analytics_database_dev.duckdb"
++                "./local-to-cloud-data-platform/prototyping/tech-exploration/dagster/z_state/analytics/analytics_database_dev.duckdb"
              )
              .expanduser()
              .resolve()
